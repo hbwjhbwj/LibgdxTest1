@@ -26,14 +26,11 @@ public class StartStage extends Stage {
 		texture = new Texture(Gdx.files.internal("data/start.png"));
 		startRegion = new TextureRegion(texture, 0, 0, 800, 480);
 		startImage = new Image(startRegion);
-
-		int width = Gdx.graphics.getWidth();
-		int height = Gdx.graphics.getHeight();
-		startImage.setSize(width, height);
+		startImage.setSize(480, 320);
 
 		newGameRegion = new TextureRegion(texture, 924, 0, 100, 50);
 		newGameBtn = new Image(newGameRegion);
-		newGameBtn.setPosition(width/8, 3*height/4); 
+		newGameBtn.setPosition(40, 230); 
 		
 		this.addActor(startImage);
 		this.addActor(newGameBtn);

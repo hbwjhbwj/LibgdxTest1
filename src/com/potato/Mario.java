@@ -42,10 +42,8 @@ public class Mario extends Actor {
 
 	public void show() {
 		texture = new Texture(Gdx.files.internal("data/mario.png"));
-		//4x4
 		TextureRegion[][] spilt = TextureRegion.split(texture, 64, 64);
 		TextureRegion[][] miror = TextureRegion.split(texture, 64, 64);
-		
 		for (TextureRegion[] region1 : miror) {
 
 			for (TextureRegion region2 : region1) {

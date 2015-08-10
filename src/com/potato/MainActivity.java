@@ -51,14 +51,7 @@ public class MainActivity extends AndroidApplication {
 			Gdx.app.log("WindowManger", "addView");
 			//类似setContentView(),需要权限<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 			mWindowManager.addView(sfv, param);
+			
 		}
     }
-	@Override
-	protected void onPause() {
-		if(mWindowManager != null){
-			Gdx.app.log("MainActivity", "onPause");
-			mWindowManager.removeView(sfv);
-		}
-		super.onPause();
-	}
 }

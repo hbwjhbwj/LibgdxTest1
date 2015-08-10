@@ -27,15 +27,13 @@ public class GameStage extends Stage {
 		texture = new Texture(Gdx.files.internal("data/object.png"));
 		backdropRegion = new TextureRegion(texture, 512, 256, 512, 128);
 		backdrop = new Image(backdropRegion);
-		backdrop.setSize(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 		mushRegion = new TextureRegion(texture, 204, 0, 102, 85);
 		mushroom = new Image(mushRegion);
 
-		mario = new Mario(200, 380);
+		mario = new Mario(100, 190);
 		backdrop.setPosition(0, 170);
 		mushroom.setPosition(290, 60);
 
-		//绘制有先后顺序
 		this.addActor(backdrop);
 		this.addActor(mario);
 		this.addActor(mario.buttonL);
